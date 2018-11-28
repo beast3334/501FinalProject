@@ -8,13 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _501FinalProject
 {
-    public partial class Form1 : Form
+    public partial class Scheduler : Form
     {
-        public Form1()
+        public Scheduler()
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
     }
+}
 }
