@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace _501FinalProject
 {
-    public partial class Scheduler : Form
+    public partial class UserInterface : Form
     {
-        public Scheduler()
+        public UserInterface()
         {
             InitializeComponent();
         }
+        
 
-        private void label1_Click(object sender, EventArgs e)
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
-    private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-
     }
-}
 }
