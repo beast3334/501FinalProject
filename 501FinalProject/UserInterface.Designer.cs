@@ -59,7 +59,6 @@
             this.ux_fileMenuItem.Name = "ux_fileMenuItem";
             this.ux_fileMenuItem.Size = new System.Drawing.Size(37, 20);
             this.ux_fileMenuItem.Text = "File";
-            this.ux_fileMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // ux_aboutMenuItem
             // 
