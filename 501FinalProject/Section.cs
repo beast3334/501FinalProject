@@ -58,7 +58,7 @@ namespace _501FinalProject
 
         public string Consent {             get => data[5]  as string;      }
 
-        public int EnrollCap {              get => data[6]  as int;         }
+        public int EnrollCap {              get => (int)data[6];            }
 
         public string TopicDescription {    get => data[7]  as string;      }
 
@@ -68,9 +68,9 @@ namespace _501FinalProject
 
         public bool[] Days {                get => data[10] as bool[];      }
 
-        public int UnitsMin {               get => data[11] as int;         }
+        public int UnitsMin {               get => (int)data[11];           }
 
-        public int UnitsMax {               get => data[12] as int;         }
+        public int UnitsMax {               get => (int)data[12];           }
 
         public string ClassAssnComp {       get => data[13] as string;      }
     }
