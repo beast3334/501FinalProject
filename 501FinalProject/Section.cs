@@ -10,24 +10,7 @@ namespace _501FinalProject
     {
         Dictionary<int, Object> data;
 
-        /// <summary>
-        /// Constructor to be called to initialize a Section object.
-        /// </summary>
-        /// <param name="subject">Col 0 - </param>
-        /// <param name="catalogNum">Col 1 - </param>
-        /// <param name="classDescription">Col 2 - </param>
-        /// <param name="sectionIdentifier">Col 3 - </param>
-        /// <param name="instructor">Col 4 - </param>
-        /// <param name="consent">Col 5 - </param>
-        /// <param name="enrollCap">Col 6 - </param>
-        /// <param name="topicDescription">Col 7 - </param>
-        /// <param name="meetingStart">Col 8 - </param>
-        /// <param name="meetingEnd">Col 9 - </param>
-        /// <param name="days">Col 10 - </param>
-        /// <param name="unitsMin">Col 11 - </param>
-        /// <param name="unitsMax">Col 12 - </param>
-        /// <param name="classAssnComp">Col 13 - </param>
-        public Section(string subject, string catalogNum, string classDescription, string sectionIdentifier, Instructor instructor, string consent, int enrollCap, string topicDescription, string meetingStart, string meetingEnd, bool[] days, int unitsMin, int unitsMax, string classAssnComp)
+        public Section(string subject, string catalogNum, string classDescription, string sectionIdentifier, Instructor instructor, string consent, int enrollCap, string topicDescription, string meetingStartDt, string meetingEndDt, string meetingTimeStart, string meetingTimeEnd, string facilityId, bool[] days, int unitsMin, int unitsMax, string classAssnComp)
         {
             data = new Dictionary<int, object>();
             data.Add(0, subject);
@@ -38,40 +21,69 @@ namespace _501FinalProject
             data.Add(5, consent);
             data.Add(6, enrollCap);
             data.Add(7, topicDescription);
-            data.Add(8, meetingStart);
-            data.Add(9, meetingEnd);
-            data.Add(10, days);
-            data.Add(11, unitsMin);
-            data.Add(12, unitsMax);
-            data.Add(13, classAssnComp);
+            data.Add(8, meetingStartDt);
+            data.Add(9, meetingEndDt);
+            data.Add(10, meetingTimeStart);
+            data.Add(11, meetingTimeEnd);
+            data.Add(12, facilityId);
+            data.Add(13, days);
+            data.Add(14, unitsMin);
+            data.Add(15, unitsMax);
+            data.Add(16, classAssnComp);
         }
 
-        public string Subject {             get => data[0]  as string;      }
+        public object this[int index] { get => data[index]; }
 
-        public string CatalogNum {          get => data[1]  as string;      }
+        public string Subject { get => data[0] as string; }
 
-        public string ClassDescription {    get => data[2]  as string;      }
+        public string CatalogNum { get => data[1] as string; }
 
-        public string SectionIdentifier {   get => data[3]  as string;      }
+        public string ClassDescription { get => data[2] as string; }
 
-        public Instructor Instructor {      get => data[4]  as Instructor;  }
+        public string SectionIdentifier { get => data[3] as string; }
 
-        public string Consent {             get => data[5]  as string;      }
+        public Instructor Instructor { get => data[4] as Instructor; }
 
-        public int EnrollCap {              get => (int)data[6];            }
+        public string Consent { get => data[5] as string; }
 
-        public string TopicDescription {    get => data[7]  as string;      }
+        public int EnrollCap { get => (int)data[6]; }
 
-        public string MeetingStart {        get => data[8]  as string;      }
+        public string TopicDescription { get => data[7] as string; }
 
-        public string MeetingEnd {          get => data[9]  as string;      }
+        public string MeetingStartDate { get => data[8] as string; }
 
-        public bool[] Days {                get => data[10] as bool[];      }
+        public string MeetingEndDate { get => data[9] as string; }
 
-        public int UnitsMin {               get => (int)data[11];           }
+        public string MeetingStart { get => data[10] as string; }
 
-        public int UnitsMax {               get => (int)data[12];           }
+        public string MeetingEnd { get => data[11] as string; }
+        
+        public string FacilityId { get => data[12] as string; }
 
-        public string ClassAssnComp {       get => data[13] as string;      }
+        public bool[] Days { get => data[13] as bool[]; }
+
+        public int UnitsMin { get => (int)data[14]; }
+
+        public int UnitsMax { get => (int)data[15]; }
+
+        public string ClassAssnComp { get => data[16] as string; }
+
+        public override bool Equals(object obj)
+        {
+            Section sec = obj as Section;
+
+            for(int i = 0; i < data.Count; i++)
+            {
+                if (!(this[i].Equals(sec[i]))) return false;
+            }
+
+            return true;
+        }
+
+        public bool IsSimilar(Section s)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
+

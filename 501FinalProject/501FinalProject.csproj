@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BC240D2-748B-43D3-AC4C-EDBF17BA6F0A}</ProjectGuid>
+    <ProjectGuid>{A7D790B4-A07C-4CAC-8A3A-67D1B01B8652}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>_501FinalProject</RootNamespace>
     <AssemblyName>501FinalProject</AssemblyName>
@@ -45,6 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs" />
+    <Compile Include="Clear.cs" />
+    <Compile Include="EventHandler.cs" />
+    <Compile Include="Instructor.cs" />
+    <Compile Include="Load.cs" />
+    <Compile Include="Reload.cs" />
+    <Compile Include="Section.cs" />
+    <Compile Include="Semester.cs" />
     <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +61,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Verify.cs" />
     <EmbeddedResource Include="UserInterface.resx">
       <DependentUpon>UserInterface.cs</DependentUpon>
     </EmbeddedResource>

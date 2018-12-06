@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 namespace _501FinalProject
 {
     class Instructor
-    { 
+    {
+        string name;
         public Instructor(string n)
         {
             this.Name = n;
         }
-        
+
         public override bool Equals(object obj)
         {
             Instructor i = obj as Instructor;
@@ -25,6 +26,10 @@ namespace _501FinalProject
             return base.GetHashCode();
         }
 
-        public string Name { get => name; set => name = value; }
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
     }
 }

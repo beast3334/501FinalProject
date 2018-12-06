@@ -1,6 +1,6 @@
 ﻿namespace _501FinalProject
 {
-    partial class UserInterface
+    partial class uxUserInterface
     {
         /// <summary>
         /// Required designer variable.
@@ -28,130 +28,156 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ux_menuStrip = new System.Windows.Forms.MenuStrip();
-            this.ux_fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ux_aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ux_localFilePath = new System.Windows.Forms.TextBox();
-            this.ux_localLabel = new System.Windows.Forms.Label();
-            this.ux_KSISFilePath = new System.Windows.Forms.TextBox();
-            this.ux_KSISLabel = new System.Windows.Forms.Label();
-            this.ux_reloadButton = new System.Windows.Forms.Button();
-            this.ux_clearButton = new System.Windows.Forms.Button();
-            this.ux_output = new System.Windows.Forms.TextBox();
-            this.ux_menuStrip.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.uxFileMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kSISFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxAboutMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxReloadButton = new System.Windows.Forms.Button();
+            this.uxClearButton = new System.Windows.Forms.Button();
+            this.utxLocalLabel = new System.Windows.Forms.Label();
+            this.uxLocalFileTextbox = new System.Windows.Forms.TextBox();
+            this.uxKSISTextBox = new System.Windows.Forms.TextBox();
+            this.utxKSISLabel = new System.Windows.Forms.Label();
+            this.uxOutputTextbox = new System.Windows.Forms.TextBox();
+            this.uxopenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ux_menuStrip
+            // menuStrip1
             // 
-            this.ux_menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ux_menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ux_fileMenuItem,
-            this.ux_aboutMenuItem});
-            this.ux_menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.ux_menuStrip.Name = "ux_menuStrip";
-            this.ux_menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.ux_menuStrip.Size = new System.Drawing.Size(370, 24);
-            this.ux_menuStrip.TabIndex = 0;
-            this.ux_menuStrip.Text = "menuStrip1";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxFileMenu,
+            this.uxAboutMenu});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(590, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // ux_fileMenuItem
+            // uxFileMenu
             // 
-            this.ux_fileMenuItem.Name = "ux_fileMenuItem";
-            this.ux_fileMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.ux_fileMenuItem.Text = "File";
-            this.ux_fileMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            this.uxFileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadToolStripMenuItem});
+            this.uxFileMenu.Name = "uxFileMenu";
+            this.uxFileMenu.Size = new System.Drawing.Size(37, 20);
+            this.uxFileMenu.Text = "File";
             // 
-            // ux_aboutMenuItem
+            // loadToolStripMenuItem
             // 
-            this.ux_aboutMenuItem.Name = "ux_aboutMenuItem";
-            this.ux_aboutMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.ux_aboutMenuItem.Text = "About";
+            this.loadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.localFileToolStripMenuItem,
+            this.kSISFileToolStripMenuItem});
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
-            // ux_localFilePath
+            // localFileToolStripMenuItem
             // 
-            this.ux_localFilePath.Location = new System.Drawing.Point(48, 28);
-            this.ux_localFilePath.Margin = new System.Windows.Forms.Padding(2);
-            this.ux_localFilePath.Name = "ux_localFilePath";
-            this.ux_localFilePath.Size = new System.Drawing.Size(131, 20);
-            this.ux_localFilePath.TabIndex = 1;
+            this.localFileToolStripMenuItem.Name = "localFileToolStripMenuItem";
+            this.localFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.localFileToolStripMenuItem.Text = "Local File";
+            this.localFileToolStripMenuItem.Click += new System.EventHandler(this.localFileToolStripMenuItem_Click);
             // 
-            // ux_localLabel
+            // kSISFileToolStripMenuItem
             // 
-            this.ux_localLabel.AutoSize = true;
-            this.ux_localLabel.Location = new System.Drawing.Point(9, 31);
-            this.ux_localLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ux_localLabel.Name = "ux_localLabel";
-            this.ux_localLabel.Size = new System.Drawing.Size(36, 13);
-            this.ux_localLabel.TabIndex = 2;
-            this.ux_localLabel.Text = "Local:";
+            this.kSISFileToolStripMenuItem.Name = "kSISFileToolStripMenuItem";
+            this.kSISFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kSISFileToolStripMenuItem.Text = "KSIS File";
+            this.kSISFileToolStripMenuItem.Click += new System.EventHandler(this.kSISFileToolStripMenuItem_Click);
             // 
-            // ux_KSISFilePath
+            // uxAboutMenu
             // 
-            this.ux_KSISFilePath.Location = new System.Drawing.Point(215, 28);
-            this.ux_KSISFilePath.Margin = new System.Windows.Forms.Padding(2);
-            this.ux_KSISFilePath.Name = "ux_KSISFilePath";
-            this.ux_KSISFilePath.Size = new System.Drawing.Size(144, 20);
-            this.ux_KSISFilePath.TabIndex = 3;
+            this.uxAboutMenu.Name = "uxAboutMenu";
+            this.uxAboutMenu.Size = new System.Drawing.Size(52, 20);
+            this.uxAboutMenu.Text = "About";
+            this.uxAboutMenu.Click += new System.EventHandler(this.uxAboutMenu_Click);
             // 
-            // ux_KSISLabel
+            // uxReloadButton
             // 
-            this.ux_KSISLabel.AutoSize = true;
-            this.ux_KSISLabel.Location = new System.Drawing.Point(181, 31);
-            this.ux_KSISLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ux_KSISLabel.Name = "ux_KSISLabel";
-            this.ux_KSISLabel.Size = new System.Drawing.Size(34, 13);
-            this.ux_KSISLabel.TabIndex = 4;
-            this.ux_KSISLabel.Text = "KSIS:";
+            this.uxReloadButton.Location = new System.Drawing.Point(413, 1);
+            this.uxReloadButton.Name = "uxReloadButton";
+            this.uxReloadButton.Size = new System.Drawing.Size(85, 23);
+            this.uxReloadButton.TabIndex = 1;
+            this.uxReloadButton.Text = "Reload";
+            this.uxReloadButton.UseVisualStyleBackColor = true;
             // 
-            // ux_reloadButton
+            // uxClearButton
             // 
-            this.ux_reloadButton.Location = new System.Drawing.Point(219, 4);
-            this.ux_reloadButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ux_reloadButton.Name = "ux_reloadButton";
-            this.ux_reloadButton.Size = new System.Drawing.Size(73, 19);
-            this.ux_reloadButton.TabIndex = 5;
-            this.ux_reloadButton.Text = "Reload";
-            this.ux_reloadButton.UseVisualStyleBackColor = true;
+            this.uxClearButton.Location = new System.Drawing.Point(504, 1);
+            this.uxClearButton.Name = "uxClearButton";
+            this.uxClearButton.Size = new System.Drawing.Size(85, 23);
+            this.uxClearButton.TabIndex = 2;
+            this.uxClearButton.Text = "Clear";
+            this.uxClearButton.UseVisualStyleBackColor = true;
             // 
-            // ux_clearButton
+            // utxLocalLabel
             // 
-            this.ux_clearButton.Location = new System.Drawing.Point(296, 4);
-            this.ux_clearButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ux_clearButton.Name = "ux_clearButton";
-            this.ux_clearButton.Size = new System.Drawing.Size(65, 19);
-            this.ux_clearButton.TabIndex = 6;
-            this.ux_clearButton.Text = "Clear";
-            this.ux_clearButton.UseVisualStyleBackColor = true;
+            this.utxLocalLabel.AutoSize = true;
+            this.utxLocalLabel.Location = new System.Drawing.Point(11, 37);
+            this.utxLocalLabel.Name = "utxLocalLabel";
+            this.utxLocalLabel.Size = new System.Drawing.Size(36, 13);
+            this.utxLocalLabel.TabIndex = 3;
+            this.utxLocalLabel.Text = "Local:";
             // 
-            // ux_output
+            // uxLocalFileTextbox
             // 
-            this.ux_output.Location = new System.Drawing.Point(0, 52);
-            this.ux_output.Margin = new System.Windows.Forms.Padding(2);
-            this.ux_output.Multiline = true;
-            this.ux_output.Name = "ux_output";
-            this.ux_output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ux_output.Size = new System.Drawing.Size(370, 193);
-            this.ux_output.TabIndex = 7;
+            this.uxLocalFileTextbox.Location = new System.Drawing.Point(53, 33);
+            this.uxLocalFileTextbox.Name = "uxLocalFileTextbox";
+            this.uxLocalFileTextbox.ReadOnly = true;
+            this.uxLocalFileTextbox.Size = new System.Drawing.Size(196, 20);
+            this.uxLocalFileTextbox.TabIndex = 4;
             // 
-            // UserInterface
+            // uxKSISTextBox
+            // 
+            this.uxKSISTextBox.Location = new System.Drawing.Point(377, 30);
+            this.uxKSISTextBox.Name = "uxKSISTextBox";
+            this.uxKSISTextBox.ReadOnly = true;
+            this.uxKSISTextBox.Size = new System.Drawing.Size(196, 20);
+            this.uxKSISTextBox.TabIndex = 6;
+            // 
+            // utxKSISLabel
+            // 
+            this.utxKSISLabel.AutoSize = true;
+            this.utxKSISLabel.Location = new System.Drawing.Point(335, 33);
+            this.utxKSISLabel.Name = "utxKSISLabel";
+            this.utxKSISLabel.Size = new System.Drawing.Size(34, 13);
+            this.utxKSISLabel.TabIndex = 5;
+            this.utxKSISLabel.Text = "KSIS:";
+            // 
+            // uxOutputTextbox
+            // 
+            this.uxOutputTextbox.Location = new System.Drawing.Point(14, 70);
+            this.uxOutputTextbox.Multiline = true;
+            this.uxOutputTextbox.Name = "uxOutputTextbox";
+            this.uxOutputTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.uxOutputTextbox.Size = new System.Drawing.Size(559, 318);
+            this.uxOutputTextbox.TabIndex = 7;
+            // 
+            // uxopenFileDialog
+            // 
+            this.uxopenFileDialog.FileName = "openFileDialog";
+            // 
+            // uxUserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 245);
-            this.Controls.Add(this.ux_output);
-            this.Controls.Add(this.ux_clearButton);
-            this.Controls.Add(this.ux_reloadButton);
-            this.Controls.Add(this.ux_KSISLabel);
-            this.Controls.Add(this.ux_KSISFilePath);
-            this.Controls.Add(this.ux_localLabel);
-            this.Controls.Add(this.ux_localFilePath);
-            this.Controls.Add(this.ux_menuStrip);
-            this.MainMenuStrip = this.ux_menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "UserInterface";
+            this.ClientSize = new System.Drawing.Size(590, 400);
+            this.Controls.Add(this.uxOutputTextbox);
+            this.Controls.Add(this.uxKSISTextBox);
+            this.Controls.Add(this.utxKSISLabel);
+            this.Controls.Add(this.uxLocalFileTextbox);
+            this.Controls.Add(this.utxLocalLabel);
+            this.Controls.Add(this.uxClearButton);
+            this.Controls.Add(this.uxReloadButton);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "uxUserInterface";
             this.Text = "Scheduler";
-            this.ux_menuStrip.ResumeLayout(false);
-            this.ux_menuStrip.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,16 +185,20 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip ux_menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem ux_fileMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ux_aboutMenuItem;
-        private System.Windows.Forms.TextBox ux_localFilePath;
-        private System.Windows.Forms.Label ux_localLabel;
-        private System.Windows.Forms.TextBox ux_KSISFilePath;
-        private System.Windows.Forms.Label ux_KSISLabel;
-        private System.Windows.Forms.Button ux_reloadButton;
-        private System.Windows.Forms.Button ux_clearButton;
-        private System.Windows.Forms.TextBox ux_output;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem uxFileMenu;
+        private System.Windows.Forms.ToolStripMenuItem uxAboutMenu;
+        private System.Windows.Forms.Button uxReloadButton;
+        private System.Windows.Forms.Button uxClearButton;
+        private System.Windows.Forms.Label utxLocalLabel;
+        private System.Windows.Forms.TextBox uxLocalFileTextbox;
+        private System.Windows.Forms.TextBox uxKSISTextBox;
+        private System.Windows.Forms.Label utxKSISLabel;
+        private System.Windows.Forms.TextBox uxOutputTextbox;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog uxopenFileDialog;
+        private System.Windows.Forms.ToolStripMenuItem localFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kSISFileToolStripMenuItem;
     }
 }
 
